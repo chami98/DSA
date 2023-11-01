@@ -22,3 +22,14 @@ queue.push('item1');
 queue.push('item2');
 const dequeuedItem = queue.shift(); // 'item1'
 
+class Node {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
+  const node1 = new Node('A');
+  const node2 = new Node('B');
+  node1.next = node2;
+  
+
