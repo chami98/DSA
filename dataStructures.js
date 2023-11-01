@@ -16,3 +16,9 @@ const stack = [];
 stack.push("item1");
 stack.push("item2");
 const poppedItem = stack.pop(); // 'item2'
+
+const queue = [];
+queue.push('item1');
+queue.push('item2');
+const dequeuedItem = queue.shift(); // 'item1'
+
