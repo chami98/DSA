@@ -18,18 +18,27 @@ stack.push("item2");
 const poppedItem = stack.pop(); // 'item2'
 
 const queue = [];
-queue.push('item1');
-queue.push('item2');
+queue.push("item1");
+queue.push("item2");
 const dequeuedItem = queue.shift(); // 'item1'
 
 class Node {
-    constructor(value) {
-      this.value = value;
-      this.next = null;
-    }
+  constructor(value) {
+    this.value = value;
+    this.next = null;
   }
-  const node1 = new Node('A');
-  const node2 = new Node('B');
-  node1.next = node2;
-  
+}
+const node1 = new Node("A");
+const node2 = new Node("B");
+node1.next = node2;
 
+class TreeNode {
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
+}
+const root = new TreeNode(10);
+root.left = new TreeNode(5);
+root.right = new TreeNode(15);
