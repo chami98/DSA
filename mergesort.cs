@@ -52,3 +52,6 @@ private static void Merge(int[] arr, int left, int mid, int right)
         k++;
     }
 }
+
+int[] arr = {12, 11, 13, 5, 6};
+MergeSort(arr, 0, arr.Length - 1);
