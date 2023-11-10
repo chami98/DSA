@@ -13,3 +13,6 @@ public static void InsertionSort(int[] arr)
         arr[j + 1] = key;
     }
 }
+
+int[] arr = {12, 11, 13, 5, 6};
+InsertionSort(arr);
