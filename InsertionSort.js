@@ -1,27 +1,20 @@
 function insertionSort(arr) {
-    const n = arr.length;
-  
-    for (let i = 1; i < n; i++) {
-      // Store the current element to be inserted
-      let currentElement = arr[i];
-      let j = i - 1;
-  
-      // Compare the current element with the elements in the sorted part of the array
-      while (j >= 0 && arr[j] > currentElement) {
-        // Shift elements to the right to make space for the current element
-        arr[j + 1] = arr[j];
-        j--;
-      }
-  
-      // Insert the current element into its correct position
-      arr[j + 1] = currentElement;
+  let i = 1;
+  while (i < arr.length) {
+    let j = i;
+    while (j > 0 && arr[j - 1] > arr[j]) {
+      // Swap arr[j] and arr[j - 1]
+      let temp = arr[j];
+      arr[j] = arr[j - 1];
+      arr[j - 1] = temp;
+      j--;
     }
-  
-    return arr;
+    i++;
   }
-  
-  // Example usage:
-  const unsortedArray = [64, 25, 12, 22, 11];
-  const sortedArray = insertionSort(unsortedArray);
-  console.log(sortedArray); // [11, 12, 22, 25, 64]
-  
+  return arr;
+}
+
+// Example usage:
+const unsortedArray = [64, 25, 12, 22, 11];
+const sortedArray = insertionSort(unsortedArray);
+console.log(sortedArray); // [11, 12, 22, 25, 64]
