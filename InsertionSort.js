@@ -1,15 +1,14 @@
 function insertionSort(arr) {
-  let i = 1;
-  while (i < arr.length) {
-    let j = i;
-    while (j > 0 && arr[j - 1] > arr[j]) {
-      // Swap arr[j] and arr[j - 1]
-      let temp = arr[j];
-      arr[j] = arr[j - 1];
-      arr[j - 1] = temp;
-      j--;
+  for (let i = 1; i < arr.length; i++) {
+    let key = arr[i];
+    let j = i - 1;
+
+    // Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j = j - 1;
     }
-    i++;
+    arr[j + 1] = key;
   }
   return arr;
 }
