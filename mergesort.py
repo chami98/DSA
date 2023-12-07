@@ -1,11 +1,16 @@
 def merge_sort(arr):
+    # If the array has 1 or 0 elements, it's already sorted
     if len(arr) <= 1:
         return arr
 
+    # Find the middle of the array
     mid = len(arr) // 2
+
+    # Split the array into two halves
     left_half = arr[:mid]
     right_half = arr[mid:]
 
+    # Recursively sort both halves and merge them
     return merge(merge_sort(left_half), merge_sort(right_half))
 
 def merge(left, right):
