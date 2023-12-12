@@ -1,4 +1,6 @@
+#include <iostream>
 #include <vector>
+
 using namespace std;
 
 // Function to perform binary search on a sorted array
@@ -28,22 +30,4 @@ int binarySearch(vector<int>& arr, int target) {
 
     // If the target is not found, return -1
     return -1;
-}
-        } else {
-            right = mid - 1;
-        }
-    }
-    return -1;
-}
-
-int main() {
-    vector<int> arr = {1, 3, 5, 7, 9};
-    int target = 7;
-    int index = binarySearch(arr, target);
-    if (index != -1) {
-        cout << "Found " << target << " at index " << index << endl;
-    } else {
-        cout << "Could not find " << target << endl;
-    }
-    return 0;
 }
